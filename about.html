@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hot Beans Web</title>
+    <link rel="icon" href="images/bean.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/4451b09aeb.js" crossorigin="anonymous"></script>
+    <meta name="keywords" content="web-design,web-develop,frontenddesign,webdesignagency,webdevelopers,webdevelopjobs,techjobs">
+</head>
+<body class="page-body">
+    <header class="navbar">
+        <a href="home.html" class="logo">Hot Beans Web</a>
+        <nav class="nav-cont">
+            <div class="sidebar">
+                <div class="icons-sidebar">
+                    <i onclick="hideSidebar()" class="fa-solid fa-xmark"></i>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <ol class="nav-elements">
+                    <li><a href="team.html">Meet the Team</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="jobs.html">Jobs</a></li>
+                    <li><a href="links.html">Useful Links</a></li>
+                </ol>
+            </div>
+            <ol class="nav-elements onDesk">
+                <li class="hideOnMob"><a href="team.html">Meet the Team</a></li>
+                <li class="hideOnMob"><a href="about.html">About Us</a></li>
+                <li class="hideOnMob"><a href="jobs.html">Jobs</a></li>
+                <li class="hideOnMob"><a href="links.html">Useful Links</a></li>
+            </ol>
+            <div class="desk-icons">
+                <i class="fa-solid fa-magnifying-glass iconDesk hideOnMob"></i>
+                <i onclick="showSidebar()" class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+    <main class="about-page">
+        <div id="scroll-bar"></div>
+        <div id="scroll-cont"></div>
+        <section class="page-content about-image-bg reveal-image">
+        </section>
+        <section class="page-content about-content">
+            <h1>About Us</h1>
+            <p>Discover our story and what drives us. Founded on the principles of innovation and creativity, we are a web design agency committed to transforming ideas into beautiful, functional digital experiences. Our journey is one of passion, dedication, and a relentless pursuit of excellence. </p>
+        </section>
+        <section class="page-content about-images-content">
+            <img src="images/Earth.jpeg" alt="Earth Night Time from Space">
+            <br>
+            <p>Meet us, Get to know us and Learn more about our mission, our vision, and the values that guide our work as we strive to elevate brands and engage audiences worldwide. Join us in the pathway of the Infinity.</p>
+        </section>
+        <section class="cards">
+            <div class="inner">
+                <h1>Our Values</h1>
+                <div class="border"></div>
+                <div class="val-row">
+                    <div class="val-col">
+                        <div class="val-num val-purple"></div>
+                        <div class="name">Innovation</div>
+                        <br>
+                        <p>We constantly explore cutting-edge technologies and creative solutions to ensure our designs are not only visually stunning but also functionally superior. Our goal is to set trends, not follow them. Our agency is a commitment to innovation</p>
+                    </div>
+                    <div class="val-col">
+                        <div class="val-num val-blue"></div>
+                        <div class="name">Integrity</div>
+                        <br>
+                        <p>We believe in doing business with honesty and transparency. Our relationships with clients are built on trust and mutual respect, ensuring that every project is handled with the utmost ethical standards. We promise to deliver what we commit.</p>
+                    </div>
+                    <div class="val-col">
+                        <div class="val-num val-green"></div>
+                        <div class="name">Collaboration</div>
+                        <br>
+                        <p>We work closely with our clients, listening to their needs and ideas, to create tailor-made solutions. Our team's diverse expertise allows us to approach problems from multiple angles and produce the best possible outcomes. Success is team effort.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="home-footer bottom-footer">
+        <div class="icons">
+            <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+        <p>Copyright reserved 2024 @ Hot Beans Web</p>
+    </footer>
+    <script>
+        const primaryHeader = document.querySelector('.navbar');
+        const scrollWatcher = document.createElement('div');
+        scrollWatcher.setAttribute('data-scroll-watcher', '');
+        primaryHeader.before(scrollWatcher);
+        const navObserver = new IntersectionObserver((entries) => {
+            primaryHeader.classList.toggle('sticking', !entries[0].isIntersecting)
+        }, {rootMargin: "200px 0px 0px 0px"})
+        navObserver.observe(scrollWatcher)
+
+        let progress = document.getElementById('scroll-bar');
+        let totalHeight = document.body.scrollHeight - window.innerHeight;
+        window.onscroll = function(){
+            let scrollHeight = (window.pageYOffset / totalHeight) * 350;
+            progress.style.height = Math.min(scrollHeight, 350) + "px";
+        }
+        function showSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.right = '0';
+        }
+        function hideSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.right = '-100%';
+        }
+    </script>
+</body>
+</html>

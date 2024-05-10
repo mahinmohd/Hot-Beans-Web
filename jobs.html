@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hot Beans Web</title>
+    <link rel="icon" href="images/bean.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/4451b09aeb.js" crossorigin="anonymous"></script>
+    <meta name="keywords" content="web-design,web-develop,frontenddesign,webdesignagency,webdevelopers,webdevelopjobs,techjobs">
+</head>
+<body class="page-body">
+    <header class="navbar">
+        <a href="home.html" class="logo">Hot Beans Web</a>
+        <nav class="nav-cont">
+            <div class="sidebar">
+                <div class="icons-sidebar">
+                    <i onclick=hideSidebar() class="fa-solid fa-xmark"></i>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <ol class="nav-elements">
+                    <li><a href="team.html">Meet the Team</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="jobs.html">Jobs</a></li>
+                    <li><a href="links.html">Useful Links</a></li>
+                </ol>
+            </div>
+            <ol class="nav-elements onDesk">
+                <li class="hideOnMob"><a href="team.html">Meet the Team</a></li>
+                <li class="hideOnMob"><a href="about.html">About Us</a></li>
+                <li class="hideOnMob"><a href="jobs.html">Jobs</a></li>
+                <li class="hideOnMob"><a href="links.html">Useful Links</a></li>
+            </ol>
+            <div class="desk-icons">
+                <i class="fa-solid fa-magnifying-glass iconDesk hideOnMob"></i>
+                <i onclick=showSidebar() class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+    <main class="jobs-page">
+        <div id="scroll-bar"></div>
+        <div id="scroll-cont"></div>
+        <section class="page-content jobs-top-content">
+            <h1>Code your Future!</h1>
+            <p>Join us and shape the future of the web. At our agency, coding is more than just writing lines of code—it's about building solutions that make a real impact. Be part of a team that values creativity, collaboration, and the continuous pursuit of excellence.</p>
+        </section>
+        <section class="page-content jobs-quote-content">
+            <div class="quotes-container">
+                <div class="quotes">
+                    <h3 id="quote-1" class="quote">"Seek knowledge even if you have to cross seas, for it's an obligation on the believers."
+                        <span class="credit">Muhammed SAW, MOA</span>
+                    </h3>
+                    <h3 id="quote-2" class="quote">"The important thing is not to stop questioning. Curiosity has its own reason for existing."
+                        <span class="credit">Albert Einstein</span>
+                    </h3>
+                    <h3 id="quote-3" class="quote">"We're just a dot in the universe; let's live limitlessly while exploring the infinite."
+                        <span class="credit">CEO, Hot Beans Web</span>
+                    </h3>
+                </div>
+            </div>
+        </section>                   
+        <div class="cards jobs-cards">
+            <div class="inner">
+                <h1>Featured Role(s)</h1>
+                <div class="border"></div>
+                <div class="row">
+                    <div class="col">
+                        <div class="card job-card">
+                            <div class="name">Junior Web Dev</div>
+                            <br>
+                            <p>The Junior Web Developer would be resposible for building the website from scratch while meeting the client's needs and preferences, whilst also communicating and working with the senior web developer.</p>
+                            <br>
+                            <a href="#app-form">Apply</a>
+                        </div>
+                    </div>
+                </div>
+                <br><br>
+                <h1>Open Roles</h1>
+                <div class="border"></div>
+                <div class="row">
+                    <div class="col">
+                        <div class="card job-card">
+                            <div class="name">Web Developer</div>
+                            <br>
+                            <p>Join our team to craft dynamic websites using the latest programming languages and frameworks. Our Web Developers will be the commitment to the clients needs and their preferences. Satisfaction rate is highly valued!</p>
+                            <br>
+                            <a href="#app-form">Apply</a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card job-card">
+                            <div class="name">UI/UX Designer</div>
+                            <br>
+                            <p>Design intuitive and attractive user interfaces that deliver seamless user experiences. The designers are responsible for the visual representation of the website and the pleasing looks of it, to attract the target audience.</p>
+                            <br>
+                            <a href="#app-form">Apply</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <div class="card job-card">
+                            <div class="name">Project Manager</div>
+                            <br>
+                            <p>Lead projects from conception to completion, ensuring timely delivery and client satisfaction. This role is highly preferrable to people with the commitment and strive for the team play, more than the self-play mindset. </p>
+                            <br>
+                            <a href="#app-form">Apply</a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card job-card">
+                            <div class="name">Content Strategist</div>
+                            <br>
+                            <p>Develop engaging content strategies that resonate with audiences and drive engagement. The content stratergist is also responsible for the brand's website social media reach and attracting the audiences from there.</p>
+                            <br>
+                            <a href="#app-form">Apply</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <section id="app-form" class="page-content form-content">
+            <div class="form-container">
+                <h1>Apply Now</h1>
+                <div class="border"></div>
+                <br><br>
+                <form class="form">
+                    <div class="names-row">
+                        <div class="input-box">
+                            <input type="text" id="fname" required>
+                            <label for="fname">First Name</label>
+                        </div>
+						<div class="input-box">
+                            <input type="text" id="mname" required>
+                            <label for="mname">Middle Name</label>
+                        </div>
+                        <div class="input-box">
+                            <input type="text" id="lname" required>
+                            <label for="lname">Last Name</label>
+                        </div>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" id="email" required>
+                        <label for="email">Email Address</label>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" id="mobile-number" required>
+                        <label for="mobile-number">Contact Number</label>
+                    </div>
+                    <div class="input-box">
+						<textarea id="message" rows="8" required></textarea>
+                        <label for="message">Tell Us About Yourself</label>
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
+                <div class="submitted-form">
+                    <div>Thanks!</div>
+                </div>
+            </div>
+        </section>  
+    </div>
+    <footer class="home-footer bottom-footer">
+        <div class="icons">
+            <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+        <p>Copyright reserved 2024 @ Hot Beans Web</p>
+    </footer>
+    <script>
+        const primaryHeader = document.querySelector('.navbar');
+        const scrollWatcher = document.createElement('div');
+        scrollWatcher.setAttribute('data-scroll-watcher', '');
+        primaryHeader.before(scrollWatcher);
+        const navObserver = new IntersectionObserver((entries) => {
+            primaryHeader.classList.toggle('sticking', !entries[0].isIntersecting)
+        }, {rootMargin: "200px 0px 0px 0px"})
+        navObserver.observe(scrollWatcher)
+
+        let progress = document.getElementById('scroll-bar');
+        let totalHeight = document.body.scrollHeight - window.innerHeight;
+        window.onscroll = function(){
+            let scrollHeight = (window.pageYOffset / totalHeight) * 350;  // Calculate as pixels instead of percentage
+            progress.style.height = Math.min(scrollHeight, 350) + "px";  // Set height up to a max of 350px
+        }
+        function showSidebar() {
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.right = '0'
+        }
+        function hideSidebar() {
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.right = '-100%'
+        }
+
+
+        const button = document.querySelector("button");
+        const form = document.querySelector("form");
+        const thanks = document.querySelector(".submitted-form");
+        const inputs = form.querySelectorAll("input, textarea"); // Select all input fields and textarea
+
+        button.addEventListener("click", (e) => {
+            e.preventDefault(); // Prevent the actual form submission
+
+            // Check if all fields are filled
+            let allFilled = true;
+            inputs.forEach(input => {
+                if (input.value === '') {
+                    allFilled = false;
+                    input.classList.add("error"); // Optionally add an error class for visual feedback
+                }
+            });
+
+            if (allFilled) {
+                form.classList.add("effect-1"); // Start fading out the form
+                setTimeout(() => {
+                    form.style.display = "none"; // Hide the form after the fade-out animation completes
+                    thanks.style.display = "flex"; // Change display to flex to make it visible
+                    setTimeout(() => {
+                        thanks.classList.add("effect-2"); // Add the class to start the fade-in effect
+                    }, 10); // A short delay to ensure the display change has taken effect
+                }, 400); // This timeout should match the duration of the fade-out animation
+            } else {
+                // Optional: Alert the user or handle incomplete form fields differently
+                console.log("Please fill in all fields.");
+            }
+        });
+        inputs.forEach(input => {
+        input.addEventListener('input', () => {
+            if (input.value.trim() !== '') {
+                input.classList.remove("error");
+            }
+            });
+        });
+    </script>
+</body>
+</html>

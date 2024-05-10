@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hot Beans Web</title>
+    <link rel="icon" href="images/bean.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/4451b09aeb.js" crossorigin="anonymous"></script>
+    <meta name="keywords" content="web-design,web-develop,frontenddesign,webdesignagency,webdevelopers,webdevelopjobs,techjobs">
+</head>
+<body class="page-body">
+    <header class="navbar">
+        <a href="home.html" class="logo">Hot Beans Web</a>
+        <nav class="nav-cont">
+            <div class="sidebar">
+                <div class="icons-sidebar">
+                    <i onclick=hideSidebar() class="fa-solid fa-xmark"></i>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <ol class="nav-elements">
+                    <li><a href="team.html">Meet the Team</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="jobs.html">Jobs</a></li>
+                    <li><a href="links.html">Useful Links</a></li>
+                </ol>
+            </div>
+            <ol class="nav-elements onDesk">
+                <li class="hideOnMob"><a href="team.html">Meet the Team</a></li>
+                <li class="hideOnMob"><a href="about.html">About Us</a></li>
+                <li class="hideOnMob"><a href="jobs.html">Jobs</a></li>
+                <li class="hideOnMob"><a href="links.html">Useful Links</a></li>
+            </ol>
+            <div class="desk-icons">
+                <i class="fa-solid fa-magnifying-glass iconDesk hideOnMob"></i>
+                <i onclick=showSidebar() class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+    <main class="team-page">
+        <div id="scroll-bar"></div>
+        <div id="scroll-cont"></div>
+        <div class="page-content team-content">
+            <h1>Meet the Team</h1>
+            <p>Get to know the creative minds behind our projects. Our team is a bunch of designers, developers, and strategists dedicated to transforming your digital experiences. Get to know the dedicated professionals who will bring your digital vision to life. Together, we make your ideas soar!</p>
+        </div>
+        <div class="cards">
+            <div class="inner">
+                <h1>Our Team</h1>
+                <div class="border"></div>
+                <div class="row">
+                    <div class="col">
+                        <div class="card ceo">
+                            <div class="ceo-image"></div>
+                            <div class="name">Mohammed Abbas Mahin</div>
+                            <div class="post"> Founder and CEO</div>
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <p>Abbas sets the strategic direction of the agency, with innovation and ensuring the team delivers top-tier web solutions that exceed client expectations.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <div class="card">
+                            <div class="image avt-blue"></div>
+                            <div class="name">John Carter</div>
+                            <div class="post">Content Strategist</div>
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            <p>John develops content joined to the company’s objectives and target audience, creating engaging, clear, and concise copy that enhances user experience.</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="image avt-purple"></div>
+                            <div class="name">Zara Khan</div>
+                            <div class="post">Graphic Designer</div>
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <p>Zara creates visually appealing designs for the website, focusing on layout, color schemes, color grading, typography, and other various visual concepts.</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="image avt-gray"></div>
+                            <div class="name">Priya Desai</div>
+                            <div class="post">SEO Specialist</div>
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            <p>Priya optimizes and enhances the website content to increase visibility and ranking on search engines, driving more organic and natural traffic to the client website.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <div class="card">
+                            <div class="image avt-blue"></div>
+                            <div class="name">Samir Ali</div>
+                            <div class="post">Backend Developer</div>
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            <p>Samir handles the server-side web application logic and integration, ensuring the main support infrastructure for the front-end of the website is operational and efficient.</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="image avt-gray"></div>
+                            <div class="name">Lucy Green</div>
+                            <div class="post">Project Managaer</div>
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <p>Lucy oversees the project timelines, coordinates between different team members, and ensures all aspects of the project meet client expectations and deadlines.</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="image avt-purple"></div>
+                            <div class="name">Anita Sharma</div>
+                            <div class="post">Web Analyst</div>
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <p>Anita uses data analytics to measure web performance and user engagement, providing insights that help refine website strategies and improve user experience.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <div class="card">
+                            <div class="image avt-gray"></div>
+                            <div class="name">Tom Wilson</div>
+                            <div class="post">Clients Relation Manager</div>
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            <p>Tom manages client communications and relationships, ensuring client needs are met and that they are kept informed of project progress.</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="image avt-blue"></div>
+                            <div class="name">Arjun Reddy</div>
+                            <div class="post">Front-End Developer</div>
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <p>Arjun specializes in the development of the visual elements of a website that users see and interact with, ensuring seamless functionality across different browsers and devices.</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="image avt-purple"></div>
+                            <div class="name">Nadia Saleh</div>
+                            <div class="post">UX Designer</div>
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <p>Nadia focuses on enhancing user satisfaction by improving the usability, accessibility, and pleasure provided in the interaction between the user and the product.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="home-footer bottom-footer">
+        <div class="icons">
+            <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+        <p>Copyright reserved 2024 @ Hot Beans Web</p>
+    </footer>
+    <script>
+        const primaryHeader = document.querySelector('.navbar');
+        const scrollWatcher = document.createElement('div');
+        scrollWatcher.setAttribute('data-scroll-watcher', '');
+        primaryHeader.before(scrollWatcher);
+        const navObserver = new IntersectionObserver((entries) => {
+            primaryHeader.classList.toggle('sticking', !entries[0].isIntersecting)
+        }, {rootMargin: "200px 0px 0px 0px"})
+        navObserver.observe(scrollWatcher)
+
+        let progress = document.getElementById('scroll-bar');
+        let totalHeight = document.body.scrollHeight - window.innerHeight;
+        window.onscroll = function(){
+            let scrollHeight = (window.pageYOffset / totalHeight) * 350;  // Calculate as pixels instead of percentage
+            progress.style.height = Math.min(scrollHeight, 350) + "px";  // Set height up to a max of 350px
+        }
+        function showSidebar() {
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.right = '0'
+        }
+        function hideSidebar() {
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.right = '-100%'
+        }
+    </script>
+</body>
+</html>

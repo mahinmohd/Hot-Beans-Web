@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hot Beans Web</title>
+    <link rel="icon" href="images/bean.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/4451b09aeb.js" crossorigin="anonymous"></script>
+    <meta name="keywords" content="web-design,web-develop,frontenddesign,webdesignagency,webdevelopers,webdevelopjobs,techjobs">
+</head>
+<body class="page-body">
+    <header class="navbar">
+        <a href="home.html" class="logo">Hot Beans Web</a>
+        <nav class="nav-cont">
+            <div class="sidebar">
+                <div class="icons-sidebar">
+                    <i onclick=hideSidebar() class="fa-solid fa-xmark"></i>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <ol class="nav-elements">
+                    <li><a href="team.html">Meet the Team</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="jobs.html">Jobs</a></li>
+                    <li><a href="links.html">Useful Links</a></li>
+                </ol>
+            </div>
+            <ol class="nav-elements onDesk">
+                <li class="hideOnMob"><a href="team.html">Meet the Team</a></li>
+                <li class="hideOnMob"><a href="about.html">About Us</a></li>
+                <li class="hideOnMob"><a href="jobs.html">Jobs</a></li>
+                <li class="hideOnMob"><a href="links.html">Useful Links</a></li>
+            </ol>
+            <div class="desk-icons">
+                <i class="fa-solid fa-magnifying-glass iconDesk hideOnMob"></i>
+                <i onclick=showSidebar() class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+    <main class="links-page">
+        <div id="scroll-bar"></div>
+        <div id="scroll-cont"></div>
+        <section class="page-content links-content">
+            <h1>Useful Links</h1>
+            <p>Dip deep into the ocean of Web. Find the handpicked selection of courses below and Master your path to explore the infinite. Start off and adhere to the consistency and to the love of programming.</p>
+        </section>       
+        <section class="links">
+            <div class="cards">
+                <div class="inner">
+                    <h1>Learn and Explore the Cosmos</h1>
+                    <div class="border"></div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="card job-card">
+                                <div class="name">Junior Web Dev</div>
+                                <br>
+                                <div class="post">Coursera</div>
+                                <br>
+                                <a href="http://coursera.org" target="_blank">Apply</a>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card job-card">
+                                <div class="name">Front-End Web Dev</div>
+                                <br>
+                                <div class="post">Udemy</div>
+                                <br>
+                                <a href="http://udemy.com/" target="_blank">Apply</a>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card job-card">
+                                <div class="name">Full Stack Web Dev</div>
+                                <br>
+                                <div class="post">edX</div>
+                                <br>
+                                <a href="https://www.edx.org" target="_blank">Apply</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>          
+    </main>
+    <footer class="home-footer bottom-footer">
+        <div class="icons">
+            <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+        <p>Copyright reserved 2024 @ Hot Beans Web</p>
+    </footer>
+    <script>
+        const primaryHeader = document.querySelector('.navbar');
+        const scrollWatcher = document.createElement('div');
+        scrollWatcher.setAttribute('data-scroll-watcher', '');
+        primaryHeader.before(scrollWatcher);
+        const navObserver = new IntersectionObserver((entries) => {
+            primaryHeader.classList.toggle('sticking', !entries[0].isIntersecting)
+        }, {rootMargin: "200px 0px 0px 0px"})
+        navObserver.observe(scrollWatcher)
+
+        let progress = document.getElementById('scroll-bar');
+        let totalHeight = document.body.scrollHeight - window.innerHeight;
+        window.onscroll = function(){
+            let scrollHeight = (window.pageYOffset / totalHeight) * 350;  // Calculate as pixels instead of percentage
+            progress.style.height = Math.min(scrollHeight, 350) + "px";  // Set height up to a max of 350px
+        }
+        function showSidebar() {
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.right = '0'
+        }
+        function hideSidebar() {
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.right = '-100%'
+        }
+
+
+        const button = document.querySelector("button");
+        const form = document.querySelector("form");
+        const thanks = document.querySelector(".submitted-form");
+        const inputs = form.querySelectorAll("input, textarea"); // Select all input fields and textarea
+
+        button.addEventListener("click", (e) => {
+            e.preventDefault(); // Prevent the actual form submission
+
+            // Check if all fields are filled
+            let allFilled = true;
+            inputs.forEach(input => {
+                if (input.value === '') {
+                    allFilled = false;
+                    input.classList.add("error"); // Optionally add an error class for visual feedback
+                }
+            });
+
+            if (allFilled) {
+                form.classList.add("effect-1"); // Start fading out the form
+                setTimeout(() => {
+                    form.style.display = "none"; // Hide the form after the fade-out animation completes
+                    thanks.style.display = "flex"; // Change display to flex to make it visible
+                    setTimeout(() => {
+                        thanks.classList.add("effect-2"); // Add the class to start the fade-in effect
+                    }, 10); // A short delay to ensure the display change has taken effect
+                }, 400); // This timeout should match the duration of the fade-out animation
+            } else {
+                // Optional: Alert the user or handle incomplete form fields differently
+                console.log("Please fill in all fields.");
+            }
+        });
+        inputs.forEach(input => {
+        input.addEventListener('input', () => {
+            if (input.value.trim() !== '') {
+                input.classList.remove("error");
+            }
+            });
+        });
+    </script>
+</body>
+</html>

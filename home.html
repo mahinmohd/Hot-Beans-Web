@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hot Beans Web</title>
+    <link rel="icon" href="images/bean.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/4451b09aeb.js" crossorigin="anonymous"></script>
+    <meta name="keywords" content="web-design,web-develop,frontenddesign,webdesignagency,webdevelopers,webdevelopjobs,techjobs">
+</head>
+<body class="home-body">
+    <header class="navbar">
+        <a href="home.html" class="logo">Hot Beans Web</a>
+        <nav class="nav-cont">
+            <div class="sidebar">
+                <div class="icons-sidebar">
+                    <i onclick=hideSidebar() class="fa-solid fa-xmark"></i>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <ol class="nav-elements">
+                    <li><a href="team.html">Meet the Team</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="jobs.html">Jobs</a></li>
+                    <li><a href="links.html">Useful Links</a></li>
+                </ol>
+            </div>
+            <ol class="nav-elements onDesk">
+                <li class="hideOnMob"><a href="team.html">Meet the Team</a></li>
+                <li class="hideOnMob"><a href="about.html">About Us</a></li>
+                <li class="hideOnMob"><a href="jobs.html">Jobs</a></li>
+                <li class="hideOnMob"><a href="links.html">Useful Links</a></li>
+            </ol>
+            <div class="desk-icons">
+                <i class="fa-solid fa-magnifying-glass iconDesk hideOnMob"></i>
+                <i onclick=showSidebar() class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+    <main class="home-page">
+        <div class="search-view">
+            <input type="text" placeholder="Search...">
+            <br>
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="home-content">
+            <h1>Hello!</h1>
+            <p>Welcome to our studio where creativity meets technology. Crafting sleek, effective websites to bring your vision to digital life. With a blend of innovation and precision, we're dedicated to bringing your digital dreams to life. Let's work together to create something truly amazing!</p>
+            <p></p>
+        </div>
+    </main>
+    <footer class="home-footer fixed-footer">
+        <div class="icons">
+            <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+        <p>Copyright reserved 2024 @ Hot Beans Web</p>
+    </footer>
+    <script>
+        function showSidebar() {
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.right = '0'
+        }
+        function hideSidebar() {
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.right = '-100%'
+        }
+    </script>
+</body>
+</html>
