@@ -194,45 +194,49 @@
             sidebar.style.right = '-100%'
         }
 
+        // Start of Form Validation Script
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.querySelector("form");
+            const inputs = form.querySelectorAll(".input-box input, .input-box textarea");
+            const thanks = document.querySelector(".submitted-form");
 
-        const button = document.querySelector("button");
-        const form = document.querySelector("form");
-        const thanks = document.querySelector(".submitted-form");
-        const inputs = form.querySelectorAll("input, textarea"); // Select all input fields and textarea
+            form.addEventListener("submit", function (e) {
+                e.preventDefault();
+                let allFilled = true;
 
-        button.addEventListener("click", (e) => {
-            e.preventDefault(); // Prevent the actual form submission
+                inputs.forEach(input => {
+                    const label = input.nextElementSibling;
 
-            // Check if all fields are filled
-            let allFilled = true;
-            inputs.forEach(input => {
-                if (input.value === '') {
-                    allFilled = false;
-                    input.classList.add("error"); // Optionally add an error class for visual feedback
+                    if (!input.value.trim()) {
+                        label.textContent = "Required"; // Change label to show error
+                        label.style.color = 'red';
+                        allFilled = false;
+                    } else {
+                        label.textContent = input.dataset.originalLabel; // Reset label to original
+                        label.style.color = '#ffffff'; // Reset label color
+                    }
+                });
+
+                if (allFilled) {
+                    showThanks(); // Display the thanks message if all inputs are valid
                 }
             });
 
-            if (allFilled) {
-                form.classList.add("effect-1"); // Start fading out the form
+            function showThanks() {
+                form.style.display = "none";
+                thanks.style.display = "flex"; 
                 setTimeout(() => {
-                    form.style.display = "none"; // Hide the form after the fade-out animation completes
-                    thanks.style.display = "flex"; // Change display to flex to make it visible
-                    setTimeout(() => {
-                        thanks.classList.add("effect-2"); // Add the class to start the fade-in effect
-                    }, 10); // A short delay to ensure the display change has taken effect
-                }, 400); // This timeout should match the duration of the fade-out animation
-            } else {
-                // Optional: Alert the user or handle incomplete form fields differently
-                console.log("Please fill in all fields.");
+                    thanks.classList.add("effect-2"); 
+                }, 10);
             }
-        });
-        inputs.forEach(input => {
-        input.addEventListener('input', () => {
-            if (input.value.trim() !== '') {
-                input.classList.remove("error");
-            }
+
+            // Store original labels in data attribute for later reset
+            inputs.forEach(input => {
+                const label = input.nextElementSibling;
+                input.dataset.originalLabel = label.textContent;
             });
         });
+        // End of Form Validation Script
     </script>
 </body>
 </html>
